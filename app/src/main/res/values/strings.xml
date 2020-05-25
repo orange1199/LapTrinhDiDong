@@ -2,4 +2,6 @@
     <string name="app_name">HomePage</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="noti_channel_name">Kênh thông báo</string>
+    <string name="noti_channel_description">Thông báo các chương trình khuyến mãi, dịch vụ khách hàng,...</string>
 </resources>
