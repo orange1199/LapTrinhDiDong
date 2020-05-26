@@ -1,5 +1,6 @@
 package com.example.homepage.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +19,7 @@ import android.os.Bundle;
 import android.transition.Slide;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -142,9 +144,24 @@ public class MainActivity extends AppCompatActivity {
                 .setContentText(notiContent)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setAutoCancel(true)
-                .setWhen(Calendar.DATE);
+                .setWhen(0);
                 // .setContentIntent(pendIntent)
         NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         manager.notify(0, builder.build());
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.action_buy:
+                return true;
+            case R.id.action_noti:
+                Intent NotificationManagerIntent = new Intent(this, NotificationManagerActivity.class);
+                startActivity(NotificationManagerIntent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

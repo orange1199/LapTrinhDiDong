@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HomePage</string>
+    <string name="app_name">TuaLua Shop</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="noti_channel_name">Kênh thông báo</string>
